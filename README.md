@@ -13,7 +13,7 @@ payments (both scheduled and unscheduled prepayments). Therefore, valuing this a
 to par if the valuation date is right after the payment date. In fact, it is equivalent to valuing a floating rate bond with fixed notional.
 
 The discount curve used for valuation is based on risk free rates. The interest accrued is also based on these rates, and the day count convention for the interest 
-payment is also ACT / 365. Immediately after payment date, the value of the mortgage is par, equal to a floating rate bond.
+payment (see https://finpricing.com/lib/FiBondCoupon.html) is also ACT / 365. Immediately after payment date, the value of the mortgage is par, equal to a floating rate bond.
 
 In the event that the valuation date is in between payment dates, the value of the “mortgage” is not equal to par. Let t0 is the last reset date, tv is the valuation 
 date and t1 is the next interest payment. Also, let r0 correspond to the last reset rate. On the valuation date, we let ro correspond to the overnight BA rate and 
@@ -28,12 +28,4 @@ of course this would very dependent on relevant interest rates. Because of the i
 problem with Monte Carlo required for valuation. It would be even more complicated if the cashflows were for example based on prime, since one would then need to 
 have a model for how the prime rate and the interest rates are correlated.
 
-
-Reference:
-
-https://finpricing.com/lib/EqRainbow.html
-
-https://zenodo.org/record/6546723/files/zenodo-ChtSwap.pdf
-
-https://zenodo.org/record/6546723#.YpDu3qgpDq4
 
